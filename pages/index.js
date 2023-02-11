@@ -15,7 +15,7 @@ export default function Home() {
           </a>
         </nav>
         <main className="mx-auto max-w-full">
-          <ul className="group my-2 flex flex-wrap justify-center gap-1 px-2 hover:grayscale sm:gap-2">
+          <ul className="my-2 flex flex-wrap justify-center gap-1 px-2 sm:gap-2">
             {data.photos.map((i) => (
               <Card
                 key={i.id}
