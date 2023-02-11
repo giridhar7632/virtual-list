@@ -2,29 +2,30 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const Card = ({
-	id,
-	image,
-	alt,
-	blurHash,
-	link,
-	width,
-	aspectRatio,
-	color,
+  id,
+  image,
+  alt,
+  blurHash,
+  link,
+  width,
+  aspectRatio,
+  color,
 }) => (
-	<div
-		id={id}
-		className={`max-w-sm relative rounded overflow-hidden shadow-lg bg-['${color}']`}
-		style={{ aspectRatio, width }}>
-		<Link href={link} target='_blank' rel='noreferrer'>
-			<Image
-				src={image}
-				alt={alt ? alt : ''}
-				placeholder={blurHash}
-				style={{ objectFit: 'contain', objectPosition: 'center' }}
-				fill
-			/>
-		</Link>
-	</div>
+  <li
+    id={id}
+    className={`relative max-w-[49%] grow overflow-hidden rounded md:max-w-[32%] bg-[${color}]`}
+    style={{ aspectRatio, width }}
+  >
+    <Link href={link} target="_blank" rel="noreferrer">
+      <Image
+        src={image}
+        alt={alt ? alt : ''}
+        placeholder={blurHash}
+        className={`max-h-full min-w-full object-cover object-center duration-300 hover:scale-110`}
+        fill
+      />
+    </Link>
+  </li>
 )
 
 export default Card
