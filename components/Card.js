@@ -20,7 +20,7 @@ const Card = ({
       <Image
         src={image}
         alt={alt ? alt : ''}
-        placeholder={blurHash}
+        blurDataURL={blurHash}
         className={`max-h-full min-w-full object-cover object-center duration-300 hover:scale-110`}
         fill
       />
