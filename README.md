@@ -77,3 +77,15 @@ An e-commerce product list - Create a product list for an online store, with eac
 A news feed - Create a news feed that displays articles from various sources, with each article being a block of content that includes an image, title, and summary. Use virtualization to make sure that only a small portion of the feed is displayed at a time, to avoid performance issues.
 
 When choosing a project for your tutorial, make sure that it is complex enough to demonstrate the benefits of virtualization, but not so complex that it overwhelms your readers. It's also a good idea to choose a project that is visually appealing, so that your readers will be motivated to follow along.
+
+## Virtualization techniques
+
+Windowing: This technique involves rendering only a portion of the list that is visible on the screen, rather than rendering the entire list. This can significantly improve the performance of the application.
+
+Infinite Scrolling: With infinite scrolling, the list is loaded in small batches as the user scrolls down the list, rather than loading the entire list at once. This can help to reduce the amount of data that needs to be loaded and improve performance.
+
+Dynamic Loading: This technique involves only loading the data for the list items that are currently visible on the screen, and loading additional data as the user scrolls down the list. This can help to reduce the amount of data that needs to be loaded at once and improve performance.
+
+Smart Rendering: With smart rendering, the list items that are not currently visible on the screen are only rendered when they are about to come into view. This can help to reduce the number of items that need to be rendered at once and improve performance.
+
+Pagination: Pagination involves dividing the list into smaller chunks or pages, and loading only one page at a time. This can help to reduce the amount of data that needs to be loaded and improve performance.
