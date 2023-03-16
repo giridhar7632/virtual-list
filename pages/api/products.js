@@ -1,4 +1,4 @@
-import faker from '@faker-js/faker'
+import { faker } from '@faker-js/faker'
 
 const generateEcommerceProducts = (count) => {
   const products = []
@@ -12,8 +12,8 @@ const generateEcommerceProducts = (count) => {
       price: faker.commerce.price(),
       image: faker.image.image(),
       rating: {
-        stars: faker.random.number({ min: 1, max: 5 }),
-        reviews: faker.random.number({ min: 1, max: 100 }),
+        stars: faker.datatype.number({ min: 1, max: 5 }),
+        reviews: faker.datatype.number({ min: 1, max: 100 }),
       },
     }
 

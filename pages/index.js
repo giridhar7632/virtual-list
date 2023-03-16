@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useCallback, useEffect, useState } from 'react'
 import Card from '../components/Card'
+import User from '../components/User'
 // import data from '../data.json'
 
 export default function Home() {
@@ -12,8 +13,9 @@ export default function Home() {
     const fetchData = async () => {
       setIsLoading(true)
       try {
-        const { data: res } = await axios.get(`/api/photos?page=${currentPage}`)
+        const { data: res } = await axios.get(`/api/users?count=${10}`)
         setData((prev) => [...prev, ...res.data])
+        console.log(res)
         setIsLoading(false)
       } catch (error) {
         console.log(error)
@@ -49,22 +51,8 @@ export default function Home() {
         </nav>
         <main className="mx-auto max-w-full">
           <ul className="my-2 flex flex-wrap justify-center gap-1 px-2 sm:gap-2">
-            {data.map((i, idx) => {
-              console.log('i', i, 'idx', idx)
-              return (
-                <Card
-                  key={idx}
-                  id={i.id}
-                  image={i?.urls.regular}
-                  description={i.description}
-                  alt={i.alt_description}
-                  blurHash={i.blur_hash}
-                  link={i.links.html}
-                  width={i.width}
-                  aspectRatio={i.width / i.height}
-                  color={i.color}
-                />
-              )
+            {data.map((i) => {
+              return <User key={i.id} {...i} />
             })}
           </ul>
           <button

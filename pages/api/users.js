@@ -1,4 +1,4 @@
-import faker from '@faker-js/faker'
+import { faker } from '@faker-js/faker'
 
 const generateUserProfiles = (count) => {
   const users = []
@@ -9,8 +9,7 @@ const generateUserProfiles = (count) => {
       firstName: faker.name.firstName(),
       lastName: faker.name.lastName(),
       email: faker.internet.email(),
-      username: faker.internet.userName(),
-      phone: faker.phone.phoneNumber(),
+      phone: faker.phone.number(),
       address: {
         street: faker.address.streetAddress(),
         city: faker.address.city(),
